@@ -1,0 +1,49 @@
+Screen 1 : Menu Screen
+    Components
+        Start Game Button
+        Instructions Button
+        Exit Button
+
+    This would serve as the initial screen that the player sees when they launch the
+    game.
+
+Screen 2 : Game Scene
+    Components
+        Game Canvas
+            Character
+            Platforms
+            Stick
+        Score Display
+
+    This is the main scene where the game takes place. It includes all the game
+    elements and is updated
+
+Screen 3 : Game Over Scene
+    Components
+        Score Display
+        Revive Button
+        Main Menu Button
+
+    This scene is displayed when game is over, It gives a options to revive or return
+    to main menu
+
+
+Separate FXML File for each scene's Layout, along with corresponding controllers to
+handle the logic.
+
+Main Class (StickHeroApp):
+    Loads the Main menu initially
+    Manages transitions between different scenes
+
+MainMenuController
+    Handles Button action for starting the game, showing instructions, and exiting
+
+GameController
+    Manages the game logic, including updating the game state and handling user
+    input
+    Includes a method to handle the Revive Action, updating the score and resuming
+    the game from the last position.
+
+GameOverController
+    Displays the final Score
+    Handles button action for returning or reviving to the main menu
